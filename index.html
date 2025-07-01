@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App with User Accounts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 To-Do App</h1>
+
+    <!-- Auth Section -->
+    <div id="authSection" class="card">
+      <h2>Login or Register</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <div class="buttons">
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+      </div>
+    </div>
+
+    <div class="message">
+        
+    </div>
+
+    <!-- Todo Section -->
+    <div id="todoSection" class="card" style="display:none;">
+      <h2>Welcome, <span id="userDisplay"></span>!</h2>
+      <input type="text" id="todoInput" placeholder="New Task" />
+      <button onclick="addTodo()">Add Task</button>
+
+      <ul id="todoList"></ul>
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
